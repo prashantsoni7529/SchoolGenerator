@@ -40,7 +40,7 @@ const dropdown_obj =[
 ]
 
 
-function Index() {
+function Header() {
 
   return (
     <Navbar bg="dark" variant="dark" expand="lg">
@@ -64,4 +64,4 @@ function Index() {
   );
 }
 
-export default Index;
+export default Header;

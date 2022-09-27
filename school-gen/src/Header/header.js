@@ -11,7 +11,7 @@ const dropdown_obj =[
     title:"About us",
     bg:"dark",
     variant:"dark",
-    dd_item:[{i:0,href:"#href",item_name:"Profile"},{i:1,href:"#href",item_name:"Our Inspiration"},{i:2,href:"#href",item_name:"Vision and Mission"},{i:3,href:"#href",item_name:"Administration"}]
+    dd_item:[{i:0,href:"/about/profile",item_name:"Profile"},{i:1,href:"/about/inspiration",item_name:"Our Inspiration"},{i:2,href:"/about/vision",item_name:"Vision and Mission"},{i:3,href:"/about/administration",item_name:"Administration"}]
   },
   {
     show:false,
@@ -45,18 +45,18 @@ function Header() {
   return (
     <Navbar bg="dark" variant="dark" expand="lg">
       <Container>
-        <Navbar.Brand href="#home">Logo</Navbar.Brand>
+        <Navbar.Brand href="/">Logo</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="#home">Home</Nav.Link>
+            <Nav.Link href="/home">Home</Nav.Link>
             `{ 
               dropdown_obj.map(function(val,ind,array){
                 return <Dropdown key={ind}  title={val.title} bg={val.bg} variant={val.variant} dd_item_menu={val.dd_item} dropdown_obj={array}/>
               })
               }`
-            <Nav.Link href="#home">Public Disclosure</Nav.Link>
-            <Nav.Link href="#home">Contact Us</Nav.Link>
+            <Nav.Link href="/publicDisclosure">Public Disclosure</Nav.Link>
+            <Nav.Link href="/contactUs">Contact Us</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
